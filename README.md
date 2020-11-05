@@ -1,6 +1,30 @@
 # Detector App with React Native
 
-## Installation
+## 프로젝트 설치
+
+```sh
+yarn
+
+// developing android
+open -a /Applications/Android\ Studio.app path/to/firecop-app/android
+
+// developing ios
+npx pod-install
+```
+
+## 실행
+
+```sh
+// running react-native pacakager before executing android/ios
+yarn start
+
+// running android
+yarn android
+
+// running ios
+yarn ios
+```
+
 
 ## 모듈 임포트 방법
 
