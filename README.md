@@ -2,9 +2,9 @@
 
 ## Installation
 
-## How to import modules?
+## 모듈 임포트 방법
 
-It doesn't need to write a relative path, is set `src` as root. Can be imported from an absolute path based on `src`. 
+상대주소를 사용하지 않기 위해서 `src`를 루트로 설정했기때문에 아래 예시의 after 부분처럼 절대경로로 모듈을 임포트할 수 있습니다.
 
 ```js
 // before
@@ -14,36 +14,32 @@ import client from './src/services'
 import client from 'src/services'
 ```
 
-## Navigator
+## Linting (ESLint/Prettier)
 
-@react-navigation
+커밋을 치기 전 시점인 pre-commit 시점에 `yarn lint`를 실행해 포맷/린트 검사를 합니다. 코드를 고치려면 한 번에 고치려면 아래와 같은 스크립트를 사용합니다.
 
-#### What's the differences with @react-navigation and react-native-navigation??
+```sh
+yarn lint:fix
+```
+
+## Navigator (@react-navigation)
+
+#### @react-navigation과 react-native-navigation의 차이점??
 
 - @react-navigation
-  - based on javascript
-  - 300k downloads
-  - v4 is used in previous projects (current version is v5)
+  - 자바스크립트 기반
+  - 30만건 다운로드
+  - v4 이전 프로젝트에서 사용한 적 있음 (현재 v5)
 - react-native-navigation
-  - based on native (obj-c/swift, java/kotlin)
-  - 30k downloads
+  - 네이티브 기반 (Object-C/Swift, Java/Kotlin)
+  - 3만건 다운로드
 
-## Styling
+## Styling (SCSS)
 
-scss
+## State Manager for local data (Recoil)
 
-## State Manager for local data
+- 유저 로그인 세션 관리
 
-recoil
+## Graphql client for remote data (Apollo)
 
-#### What is included in the local data??
-
-- user logged in session
-
-## Graphql client for remote data
-
-apollo
-
-#### What is included in the remote data??
-
-- data fetched from rest of external
+- 외부에 요청하는 데이터 처리

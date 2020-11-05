@@ -3,6 +3,7 @@ module.exports = {
 		browser: true,
 		es6: true,
 		node: true,
+		jest: true
 	},
 	extends: [
 		'airbnb',
@@ -17,6 +18,7 @@ module.exports = {
 				extensions: ['.js', '.jsx'],
 			},
 		],
-		'import/no-unresolved': 'off'
+		'import/no-unresolved': 'off',
+		'no-console': 0
 	},
 }

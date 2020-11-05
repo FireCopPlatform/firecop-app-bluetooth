@@ -25,7 +25,7 @@ const Sub = () => {
 	}
 	const handleLoginPress = useCallback(async () => {
 		try {
-			const data = await login({ variables: {email, password}})
+			const data = await login({variables: {email, password}})
 			if (data) {
 				setUserToken(data.data.login.token)
 			}
@@ -56,11 +56,11 @@ const Sub = () => {
 					returnKeyType="send"
 				/>
 				<Button title="login btn" onPress={handleLoginPress} />
-        <Text>Sub Screen</Text>
-        <Button
-          title="go to signup screen"
-          onPress={() => navigation.navigate('Sub2')}
-        />
+				<Text>Sub Screen</Text>
+				<Button
+					title="go to signup screen"
+					onPress={() => navigation.navigate('Sub2')}
+				/>
 			</View>
 		</SafeAreaView>
 	)

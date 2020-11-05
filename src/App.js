@@ -11,7 +11,7 @@ const App = () => {
 		<SafeAreaProvider>
 			<ApolloProvider client={client}>
 				<RecoilRoot>
-					<AppContainer/>
+					<AppContainer />
 				</RecoilRoot>
 			</ApolloProvider>
 		</SafeAreaProvider>

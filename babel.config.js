@@ -1,6 +1,7 @@
 module.exports = {
 	presets: ['module:metro-react-native-babel-preset'],
-	plugins: ['react-native-classname-to-style',
+	plugins: [
+		'react-native-classname-to-style',
 		[
 			'module:react-native-dotenv',
 			{
@@ -9,8 +10,8 @@ module.exports = {
 				blacklist: null,
 				whiteist: null,
 				safe: false,
-				allowUndefined: true
-			}
+				allowUndefined: true,
+			},
 		],
 		[
 			'react-native-platform-specific-extensions',
@@ -19,11 +20,11 @@ module.exports = {
 			},
 		],
 		[
-			"module-resolver",
+			'module-resolver',
 			{
-				root: ["./"],
+				root: ['./'],
 				alias: {
-					src: "./src"
+					src: './src',
 				},
 			},
 		],
