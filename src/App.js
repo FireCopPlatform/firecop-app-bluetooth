@@ -3,7 +3,7 @@ import {View, Text} from 'react-native'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { RecoilRoot } from 'recoil'
 
-import client from './services'
+import client from 'src/services'
 import styles from './App.scss'
 
 const App = () => {

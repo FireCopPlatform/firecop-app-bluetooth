@@ -18,5 +18,14 @@ module.exports = {
 				extensions: ['scss', 'sass'],
 			},
 		],
+		[
+			"module-resolver",
+			{
+				root: ["./"],
+				alias: {
+					src: "./src"
+				},
+			},
+		],
 	],
 }
