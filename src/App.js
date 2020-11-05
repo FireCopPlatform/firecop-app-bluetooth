@@ -1,7 +1,7 @@
 import React from 'react'
 import {View, Text} from 'react-native'
-import { ApolloProvider } from '@apollo/react-hooks'
-import { RecoilRoot } from 'recoil'
+import {ApolloProvider} from '@apollo/react-hooks'
+import {RecoilRoot} from 'recoil'
 
 import client from 'src/services'
 import styles from './App.scss'
