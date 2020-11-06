@@ -61,6 +61,10 @@ const Sub = () => {
 					title="go to signup screen"
 					onPress={() => navigation.navigate('Sub2')}
 				/>
+				<Button
+					title="go to ble test screen"
+					onPress={() => navigation.navigate('Sub3')}
+				/>
 			</View>
 		</SafeAreaView>
 	)

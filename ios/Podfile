@@ -8,6 +8,10 @@ target 'FirecopTestApp' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  # react-native-permissions
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-BluetoothPeripheral', :path => "#{permissions_path}/BluetoothPeripheral.podspec"
+
   target 'FirecopTestAppTests' do
     inherit! :complete
     # Pods for testing

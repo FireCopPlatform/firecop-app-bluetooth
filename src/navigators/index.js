@@ -9,6 +9,7 @@ import {userTokenState} from 'src/states'
 
 import Sub from 'src/scenes/Sub'
 import Sub2 from 'src/scenes/Sub2'
+import Sub3 from 'src/scenes/Sub3'
 import Main from 'src/scenes/Main'
 import Main2 from 'src/scenes/Main2'
 
@@ -31,6 +32,7 @@ const AppContainer = () => {
 						<>
 							<Stack.Screen name="Sub" component={Sub} />
 							<Stack.Screen name="Sub2" component={Sub2} />
+							<Stack.Screen name="Sub3" component={Sub3} />
 						</>
 					)}
 				</Stack.Navigator>
