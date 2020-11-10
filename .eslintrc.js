@@ -19,6 +19,8 @@ module.exports = {
 			},
 		],
 		'import/no-unresolved': 'off',
-		'no-console': 0
+		'no-console': 0,
+		'react/prop-types': 'off',
+		'import/prefer-default-export': 'off'
 	},
 }

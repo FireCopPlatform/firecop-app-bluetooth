@@ -67,3 +67,9 @@ yarn lint:fix
 
 - 외부에 요청하는 데이터 처리
 - apollo 클라이언트에 들어가는 graphql 서버는 prisma cloud에서 제공하는 [데모서버](https://us1.prisma.sh/yangwook-jeong-1f91f5/demo/dev)를 사용 중
+
+## Tip
+
+optional chaining이 eslint에서 동작하지 않아서 아래와 같은 에러가 발생하니, 예전에 사용하던 방식인 `foo && foo.map()`같은 코드로 작성할 것
+
+> Parsing error: Unexpected token .

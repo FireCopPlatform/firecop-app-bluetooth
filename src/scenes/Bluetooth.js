@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {Button, Text, ScrollView} from 'react-native'
 import {useNavigation} from '@react-navigation/native'
+import {SafeAreaView} from 'react-native-safe-area-context'
 
 import manager, {requestBluetoothPermission} from 'src/services/ble'
 
@@ -19,8 +20,8 @@ const Bluetooth = () => {
 
 				if (idx === -1) {
 					setScannedDevices((prev) => [...prev, device])
-				} 
-				
+				}
+
 				if (idx !== -1) {
 					const newScannedDevices = scannedDevices
 					newScannedDevices[idx] = device
@@ -33,23 +34,25 @@ const Bluetooth = () => {
 	console.log({scannedDevices})
 
 	return (
-		<ScrollView>
-			<Text>Bluetooth Screen</Text>
-			<Text>{scannedDevices.map((i) => `${i.id}\n`)}</Text>
-			<Text>{scannedDevices.map((i) => `${i.name}\n`)}</Text>
-			<Button
-				title="go to sub screen"
-				onPress={() => navigation.navigate('Sub')}
-			/>
-			<Button
-				title="go to bluetooth2 screen"
-				onPress={() =>
-					navigation.navigate('Bluetooth2', {
-						devices: scannedDevices,
-					})
-				}
-			/>
-		</ScrollView>
+		<SafeAreaView>
+			<ScrollView>
+				<Text>Device Polling List</Text>
+				<Text>{scannedDevices.map((i) => `${i.id}\n`)}</Text>
+				<Text>{scannedDevices.map((i) => `${i.name}\n`)}</Text>
+				<Button
+					title="go to sub screen"
+					onPress={() => navigation.navigate('Sub')}
+				/>
+				<Button
+					title="go to bluetooth2 screen"
+					onPress={() =>
+						navigation.navigate('Bluetooth2', {
+							devices: scannedDevices,
+						})
+					}
+				/>
+			</ScrollView>
+		</SafeAreaView>
 	)
 }
 
