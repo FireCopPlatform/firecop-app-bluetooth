@@ -8,6 +8,8 @@ import {useRecoilValue} from 'recoil'
 import {userTokenState} from 'src/states'
 
 import Bluetooth from 'src/scenes/Bluetooth'
+import Bluetooth2 from 'src/scenes/Bluetooth2'
+import Bluetooth3 from 'src/scenes/Bluetooth3'
 import Main from 'src/scenes/Main'
 import Main2 from 'src/scenes/Main2'
 
@@ -29,6 +31,8 @@ const AppContainer = () => {
 					) : (
 						<>
 							<Stack.Screen name="Bluetooth" component={Bluetooth} />
+							<Stack.Screen name="Bluetooth2" component={Bluetooth2} />
+							<Stack.Screen name="Bluetooth3" component={Bluetooth3} />
 						</>
 					)}
 				</Stack.Navigator>

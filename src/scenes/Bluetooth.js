@@ -13,32 +13,29 @@ const Bluetooth = () => {
 	}, [])
 
 	useEffect(() => {
-		// manager.onStateChange((state) => {
-		// console.log({state})
-		// })
-
 		manager.startDeviceScan(null, null, (err, device) => {
 			if (
-				device.isConnectable &&
-				device.name &&
-				!scannedDevices.some(({id}) => id !== device.id)
+				device.isConnectable 
+				&& device.name 
+				// && scannedDevices.every(({id}) => id !== device.id)
 			) {
-				setScannedDevices((prev) => [...prev, device])
+				const idx = scannedDevices.findIndex(({id}) => id === device.id)				
+				if (idx === -1) {
+					setScannedDevices((prev) => [...prev, device])
+				}
 			}
 		})
 	}, [])
-
-	console.log({scannedDevices})
 
 	return (
 		<ScrollView>
 			<Text>Bluetooth Screen</Text>
 			<Text>{scannedDevices.map((i) => `${i.id}\n`)}</Text>
 			<Text>{scannedDevices.map((i) => `${i.name}\n`)}</Text>
-			<Button
-				title="go to sub screen"
-				onPress={() => navigation.navigate('Sub')}
-			/>
+			<Button title="go to sub screen" onPress={() => navigation.navigate('Sub')} />
+			<Button title="go to bluetooth2 screen" onPress={() => navigation.navigate('Bluetooth2', {
+				devices: scannedDevices
+			})} />
 		</ScrollView>
 	)
 }
