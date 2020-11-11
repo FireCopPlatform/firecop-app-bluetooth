@@ -73,3 +73,9 @@ yarn lint:fix
 optional chaining이 eslint에서 동작하지 않아서 아래와 같은 에러가 발생하니, 예전에 사용하던 방식인 `foo && foo.map()`같은 코드로 작성할 것
 
 > Parsing error: Unexpected token .
+
+## Page
+
+- Bluetooth: 블루투스 제어 권한 획득, 블루투스 기기 스캔
+- Bluetooth2: 선택한 블루투스 기기 연결
+- Bluetooth3: 블루투스 기기 연결 상태 확인
